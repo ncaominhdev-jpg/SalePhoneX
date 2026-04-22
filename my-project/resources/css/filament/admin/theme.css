@@ -1,0 +1,59 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+/* @config 'tailwind.config.js'; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hiệu ứng hover cho hàng bảng */
+.table-row-hover:hover {
+    @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* Badge vai trò người dùng */
+.badge-role-admin {
+    @apply bg-red-600 text-white px-2 py-1 rounded-full text-sm font-medium;
+}
+.badge-role-manager {
+    @apply bg-yellow-500 text-black px-2 py-1 rounded-full text-sm font-medium;
+}
+.badge-role-staff {
+    @apply bg-green-600 text-white px-2 py-1 rounded-full text-sm font-medium;
+}
+.badge-role-user {
+    @apply bg-gray-500 text-white px-2 py-1 rounded-full text-sm font-medium;
+}
+
+/* Tooltip tuỳ biến */
+.tooltip::after {
+    @apply absolute z-50 text-xs px-2 py-1 rounded bg-gray-800 text-white;
+    content: attr(data-tooltip);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: none;
+}
+.tooltip:hover::after {
+    display: block;
+}
+/* resources/css/filament/admin/theme.css */
+
+tr:hover {
+    @apply bg-gray-100 dark:bg-gray-800 transition duration-150;
+}
+
+.fancy-badge-admin {
+    @apply bg-red-500 text-white px-2 py-0.5 rounded-full text-xs;
+}
+
+.fancy-badge-manager {
+    @apply bg-yellow-500 text-black px-2 py-0.5 rounded-full text-xs;
+}
+
+.fancy-badge-staff {
+    @apply bg-green-500 text-white px-2 py-0.5 rounded-full text-xs;
+}
+.fi-sidebar-header .fi-sidebar-header-logo img {
+    height: 48px !important;
+}
